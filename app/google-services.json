@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "18307011231",
+    "firebase_url": "https://totalbhakti-c4cec.firebaseio.com",
+    "project_id": "totalbhakti-c4cec",
+    "storage_bucket": "totalbhakti-c4cec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18307011231:android:a7ad7fbb72af78c81d48aa",
+        "android_client_info": {
+          "package_name": "com.sanskar.tv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18307011231-ohtbcgetgtc0op5cq0t51j9ukvdgo2g4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sanskar.tv",
+            "certificate_hash": "395d21385d0ea1559a085fccbe6edbe60530cc8b"
+          }
+        },
+        {
+          "client_id": "18307011231-ra637n0cea6pc25iloc2dbkn4sp2evq2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sanskar.tv",
+            "certificate_hash": "ba09ee03f740d7d76af50422e4012c0a2436d2ae"
+          }
+        },
+        {
+          "client_id": "18307011231-s23hotfsnnmbnevbfc5dqv9d7jljgc6i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sanskar.tv",
+            "certificate_hash": "28e7737ec2ae35b05370334a736b412d24e60a63"
+          }
+        },
+        {
+          "client_id": "18307011231-ct449nim75fq9b79mi1ukj4nclce213p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWkuNJnswKc1Jh4rAN58o5g9_hyHSz4oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18307011231-ct449nim75fq9b79mi1ukj4nclce213p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "18307011231-m7381qpa17d922b04la96g5nncmtaotm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sanskargroup.sanskar"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

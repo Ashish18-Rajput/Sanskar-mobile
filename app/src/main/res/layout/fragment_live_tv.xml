@@ -1,0 +1,212 @@
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/layout_bg_color">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe_refresh_view_all"
+        android:layout_above="@+id/card_view">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_above="@+id/card_view"
+                android:layout_marginBottom="@dimen/dph10">
+
+                <include layout="@layout/toolbar2"
+                    android:id="@+id/toobar_view_all_videos"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/banner_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dph80"
+                    android:src="@mipmap/guru_banner"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:padding="@dimen/dph7"/>
+                <RelativeLayout
+                    android:id="@+id/parent_liveTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dph5">
+
+                    <TextView
+                        android:id="@+id/home_liveTv_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dph5"
+                        android:text="@string/liveTV"
+                        android:textColor="@color/greenColor"
+                        android:textSize="@dimen/sp16"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/parent_liveTv_see_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/dpw5"
+                        android:layout_marginTop="@dimen/dph5"
+                        android:layout_marginRight="@dimen/dpw5"
+                        android:background="@color/redColor">
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/home_liveTv_txt"
+                        android:background="@color/redColor" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/rl_bhajan_showmore">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/trending_now"
+                        android:textColor="@color/greenColor"
+                        android:textSize="@dimen/sp16"
+                        android:textAllCaps="false"
+                        android:id="@+id/bhajan_single_category_name"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/dph11"
+                        android:layout_marginLeft="@dimen/dpw3"
+                        android:layout_marginRight="@dimen/dpw3"/>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/redColor"
+                        android:layout_toRightOf="@id/bhajan_single_category_name"
+                        android:layout_toLeftOf="@id/parent_bhajan_see_more"
+                        android:layout_marginTop="@dimen/dph21"/>
+                </RelativeLayout>
+                <com.sanskar.tv.CustomViews.AppTextView
+                    android:id="@+id/guru_txt_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GURUS - SPIRITUAL PREACHERS"
+                    android:textSize="@dimen/sp14"
+                    android:textColor="@color/greenColor"
+                    android:paddingTop="@dimen/dph7"
+                    android:visibility="gone"
+                    android:paddingLeft="@dimen/dph7"
+                    android:paddingRight="@dimen/dph7"/>
+
+                <com.sanskar.tv.CustomViews.AppTextView
+                    android:id="@+id/guru_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="With the blessings of Indian Gurus and Saints, Totalbhakti.com has ventured into a new concept of bringing all Spiritual thoughts, Contents and Information about Indian Spiritualism on one website Totalbhakti"
+                    android:textSize="@dimen/sp12"
+                    android:padding="@dimen/dph7"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/view_all_recycler_view" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include layout="@layout/no_data_found_text"
+        android:id="@+id/no_data_found_view_all"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/whiteBgColor"
+        android:visibility="gone"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:id="@+id/fragment_watch_video_comment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/dph10">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/landscape_placeholder"
+                android:id="@+id/fragment_watch_comment_image"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/comment_bg"
+                android:layout_toEndOf="@+id/fragment_watch_comment_image"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@null"
+                    android:hint="@string/add_comment"
+                    android:textSize="15sp"
+                    android:maxLines="1"
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/watch_video_comment_et"
+                    android:layout_toLeftOf="@+id/watch_video_comment_post_tv"
+                    android:layout_marginRight="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/post"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/watch_video_comment_post_tv"
+                    />
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/watch_video_comment_post_pb"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+

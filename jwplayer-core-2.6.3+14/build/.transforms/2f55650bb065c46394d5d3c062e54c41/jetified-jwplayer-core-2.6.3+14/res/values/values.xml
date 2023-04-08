@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dim_foreground_dark">#bebebe</color>
+    <string name="ad_countdown_message">This ad ends in</string>
+    <string name="core_update_fs_error">File system error during core update</string>
+    <string name="file_download_error">Error downloading file</string>
+    <string name="file_download_invalid_http_response">Invalid HTTP response code: %1$d: %2$s</string>
+    <string name="first_run_file_copy_error">Error copying file during initial setup</string>
+    <string name="jw_error_decoder_initialization_exception">Your device does not have the required hardware decoder(s) to play this video.</string>
+    <string name="jw_error_http_data_source_exception"/>
+    <string name="jw_error_illegal_argument_exception"/>
+    <string name="jw_error_invalid_response_code_exception"/>
+    <string name="jw_error_io_exception"/>
+    <string name="jw_error_unrecognized_input_format_exception">The stream contents cannot be recognized as video by the player - the content URL may point to non-video content or you may have been redirected by a proxy server or WiFi portal.</string>
+    <string name="sdk_branch_name"/>
+    <string name="sdk_build_number">14</string>
+    <string name="sdk_version">2.6.3</string>
+</resources>

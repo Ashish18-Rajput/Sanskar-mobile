@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardWhiteColor"
+    >
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/space"/>
+    <include
+        android:id="@+id/intro_indicators"
+        layout="@layout/intro_indicators1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/space"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/payment_layout"
+        android:layout_below="@id/intro_indicators"
+        android:layout_marginTop="40dp"
+        android:padding="15dp"
+        android:visibility="visible">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@drawable/button_background1"
+            android:id="@+id/relativeLayout_first">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/first_radioButton"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/first_radioButton"
+                android:text="1 Month Plan"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:id="@+id/firstTextView"
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/first_rupee"
+                android:text="Rs 20"
+                android:layout_alignParentRight="true"
+
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@drawable/button_background1"
+            android:layout_below="@id/relativeLayout_first"
+            android:layout_marginTop="25dp"
+            android:id="@+id/relativeLayout_Second">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/second_radioButton"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/second_radioButton"
+                android:text="6 Month Plan"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:id="@+id/secondTextView"
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Rs 60"
+                android:layout_alignParentRight="true"
+                android:id="@+id/second_rupee"
+
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_background1"
+            android:layout_below="@id/relativeLayout_Second"
+            android:id="@+id/relativeLayout_third">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/third_radioButton"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/third_radioButton"
+                android:text="1 Year Plan"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:id="@+id/thirdTextView"
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Rs 100"
+                android:layout_alignParentRight="true"
+                android:id="@+id/third_rupee"
+
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"/>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_proceed"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/relativeLayout_third"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/button_background2"
+            android:gravity="center"
+
+            android:text="Proceed"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Subscribed ?"
+            android:textSize="20sp"
+            android:id="@+id/alreadySubscribed"
+            android:layout_marginLeft="65dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_below="@id/btn_proceed"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:id="@+id/signIn_textView"
+
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/alreadySubscribed"
+            android:layout_marginLeft="8dp"
+            android:textStyle="bold"
+            android:textColor="#E43E0A"
+            android:layout_below="@id/btn_proceed"
+            android:layout_marginTop="24dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

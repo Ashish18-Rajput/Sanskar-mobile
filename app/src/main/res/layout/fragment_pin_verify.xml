@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fontTxt="http://schemas.android.com/tools"
+    android:background="@mipmap/otp_background"
+    android:orientation="vertical"
+    android:paddingBottom="60dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            layout="@layout/toolbar"/>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp20"
+                android:src="@mipmap/otp_message"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Enter Pin"
+                    android:textSize="25sp"
+                    android:padding="@dimen/dp10"
+                    android:textColor="#E35A6E"
+                    />
+
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp10"
+                    android:id="@+id/textView_ll"
+                    android:text="Please Enter pin here to Verify."
+                    android:textSize="@dimen/sp17"
+                    android:gravity="center_horizontal"
+                    android:paddingRight="40dp"
+                    android:paddingLeft="40dp" />
+
+                <com.goodiebag.pinview.Pinview
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    fontTxt:pinHeight="40dp"
+                    fontTxt:pinWidth="40dp"
+                    fontTxt:inputType="number"
+                    fontTxt:cursorVisible="true"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:id="@+id/fragment_otp_pinview"
+                    fontTxt:pinLength="4"
+                    android:visibility="gone">
+                </com.goodiebag.pinview.Pinview>
+
+                <com.sanskar.tv.CustomViews.AppEditText
+                    android:id="@+id/pin_hidden_edittext"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@null"
+                    android:contentDescription="@string/pin_content_desc"
+                    android:cursorVisible="false"
+                    android:gravity="center_horizontal"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:password="true"
+                    android:textColor="#00000000" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                    <com.sanskar.tv.CustomViews.AppEditText
+                        android:id="@+id/OPT1ET"
+                        android:layout_width="@dimen/pad_40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="@dimen/pad_15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gray_btn"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/pad_10dp"
+                        android:paddingLeft="@dimen/pad_15dp"
+                        android:paddingRight="@dimen/pad_15dp"
+                        android:paddingTop="@dimen/pad_10dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/txt_18sp" />
+
+                    <com.sanskar.tv.CustomViews.AppEditText
+                        android:id="@+id/OPT2ET"
+                        android:layout_width="@dimen/pad_40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="@dimen/pad_15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gray_btn"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/pad_10dp"
+                        android:paddingLeft="@dimen/pad_15dp"
+                        android:paddingRight="@dimen/pad_15dp"
+                        android:paddingTop="@dimen/pad_10dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/txt_18sp"  />
+
+                    <com.sanskar.tv.CustomViews.AppEditText
+                        android:id="@+id/OPT3ET"
+                        android:layout_width="@dimen/pad_40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="@dimen/pad_15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gray_btn"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/pad_10dp"
+                        android:paddingLeft="@dimen/pad_15dp"
+                        android:paddingRight="@dimen/pad_15dp"
+                        android:paddingTop="@dimen/pad_10dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/txt_18sp"  />
+
+                    <com.sanskar.tv.CustomViews.AppEditText
+                        android:id="@+id/OPT4ET"
+                        android:layout_width="@dimen/pad_40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gray_btn"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/pad_10dp"
+                        android:paddingLeft="@dimen/pad_15dp"
+                        android:paddingRight="@dimen/pad_15dp"
+                        android:paddingTop="@dimen/pad_10dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/txt_18sp"  />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/dp200"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background2"
+                android:text="@string/submit"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:padding="@dimen/dp10"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginRight="@dimen/dp40"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/submit"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/forgot_pin"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Forgot Pin?"/>
+
+            <LinearLayout
+                android:id="@+id/intro_or_line_1"
+                android:layout_width="@dimen/dp200"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp20"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="7">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/line_signup" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="OR"
+                    android:textColor="@color/download_bhajan"
+                    android:textSize="@dimen/sp13"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/line_signup" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/send_otp_with_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp30"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp30"
+                android:background="@drawable/button_background2"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="Login with OTP"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

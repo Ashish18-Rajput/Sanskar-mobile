@@ -1,0 +1,80 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+
+    <!--<dimen name="textsize_10">9sp</dimen>-->
+    <!--<dimen name="textsize_12">11sp</dimen>-->
+    <!--<dimen name="textsize_14">13sp</dimen>-->
+    <!--<dimen name="textsize_16">14sp</dimen>-->
+    <!--<dimen name="textsize_18">16sp</dimen>-->
+    <!--<dimen name="textsize_20">18sp</dimen>-->
+    <!--<dimen name="textsize_22">20sp</dimen>-->
+    <!--<dimen name="textsize_24">22sp</dimen>-->
+
+    ///////////////////////activity cropper////////////////////////////
+
+    <dimen name="dpw3">3.375dp</dimen>
+    <dimen name="dpw5">5.625dp</dimen>
+    <dimen name="dpw7">7.875dp</dimen>
+    <dimen name="dpw10">11.25dp</dimen>
+    <dimen name="dpw12">13.5dp</dimen>
+    <dimen name="dpw13">14.625dp</dimen>
+    <dimen name="dpw14">15.750dp</dimen>
+    <dimen name="dpw15">16.875dp</dimen>
+    <dimen name="dpw16">18dp</dimen>
+    <dimen name="dpw18">20.25dp</dimen>
+    <dimen name="dpw20">22.5dp</dimen>
+    <dimen name="dpw120">135dp</dimen>
+    <dimen name="dpw130">146.25dp</dimen>
+    <dimen name="dpw150">168.75dp</dimen>
+
+    <dimen name="dph0.5">0.66dp</dimen>
+    <dimen name="dph2">2.66dp</dimen>
+    <dimen name="dph3">4dp</dimen>
+    <dimen name="dph5">6.66dp</dimen>
+    <dimen name="dph6">8dp</dimen>
+    <dimen name="dph7">9.33dp</dimen>
+    <dimen name="dph8">10.66dp</dimen>
+    <dimen name="dph10">13.33dp</dimen>
+    <dimen name="dph11">14.66dp</dimen>
+    <dimen name="dph15">20dp</dimen>
+    <dimen name="dph18">24dp</dimen>
+    <dimen name="dph20">26.66dp</dimen>
+    <dimen name="dph21">28dp</dimen>
+    <dimen name="dph25">33.33dp</dimen>
+    <dimen name="dph30">40dp</dimen>
+    <dimen name="dph40">53.33dp</dimen>
+    <dimen name="dph50">66.66dp</dimen>
+    <dimen name="dph60">80dp</dimen>
+    <dimen name="dph80">106.66dp</dimen>
+    <dimen name="dph100">133.33dp</dimen>
+    <dimen name="dph105">139dp</dimen>
+    <dimen name="dph110">146.66dp</dimen>
+    <dimen name="dph120">160dp</dimen>
+    <dimen name="dph130">173.33dp</dimen>
+    <dimen name="dph150">200dp</dimen>
+    <dimen name="dph160">213.33dp</dimen>
+    <dimen name="dph180">240dp</dimen>
+    <dimen name="dph190">253.33dp</dimen>
+    <dimen name="dph210">280.33dp</dimen>
+
+
+    <dimen name="sp11">13.09sp</dimen>
+    <dimen name="sp12">14.28sp</dimen>
+    <dimen name="sp13">15.47sp</dimen>
+    <dimen name="sp14">16.66sp</dimen>
+    <dimen name="sp15">17.85sp</dimen>
+    <dimen name="sp16">19.04sp</dimen>
+    <dimen name="sp17">20.23sp</dimen>
+    <dimen name="sp18">21.42sp</dimen>
+    <!--<dimen name="sp25">25sp</dimen>-->
+    <!--<dimen name="sp26">26sp</dimen>-->
+    <!--<dimen name="sp27">27sp</dimen>-->
+    <!--<dimen name="sp28">28sp</dimen>-->
+    <!--<dimen name="sp29">29sp</dimen>-->
+    <!--<dimen name="sp30">30sp</dimen>-->
+</resources>

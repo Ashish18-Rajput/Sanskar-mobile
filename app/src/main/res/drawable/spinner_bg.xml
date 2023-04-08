@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:shape="rectangle" >
+                    <solid android:color="@color/layout_bg_color"/>
+                    <corners
+                        android:radius="10dp" />
+                    <stroke
+                        android:width="0.5dp"
+                        android:color="#1EAEAEAE"
+                        />
+                    <padding android:bottom="3dp"
+                        android:left="10dp"
+
+                        android:top="3dp" />
+                </shape>
+            </item>
+
+            <item>
+                <bitmap android:gravity="right|end"
+                    android:src="@drawable/dropdown" />
+            </item>
+        </layer-list>
+    </item>
+</selector>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/layout_bg_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_watch_video"
+        layout="@layout/toolbar2" />
+
+    <RelativeLayout
+        android:id="@+id/rl_video_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_watch_video">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout_videos_parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/whiteBgColor"
+        android:visibility="visible"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextAppearance="@style/Widget.TabItem"
+        app:tabTextColor="@color/colorAccent"
+      />
+
+    <Spinner
+        android:id="@+id/spinner"
+        style="@style/SpinnerTheme"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:overlapAnchor="false"
+        android:drawSelectorOnTop="true"
+        android:dropDownWidth="wrap_content"
+        android:popupBackground="@color/whiteBgColor"
+        android:prompt="@string/spinner_title"
+        android:layout_below="@+id/tab_layout_videos_parent"
+        android:spinnerMode="dropdown"
+        android:visibility="gone"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/video_category_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab_layout_videos_parent"
+        android:visibility="gone">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/intro_images_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="200dp"-->
+    <!--android:layout_marginTop="20dp">-->
+
+    <!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/image_switcher_view_pager_videos"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="@dimen/dph10"-->
+    <!--android:layout_marginRight="@dimen/dph10" />-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/image_slider_dots_home_videos"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:orientation="horizontal" />-->
+
+
+    <!--</RelativeLayout>-->
+
+    <com.sanskar.tv.CustomViews.AppViewPager
+        android:id="@+id/view_pager_videos_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab_layout_videos_parent"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/toolbar_watch_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_search"
+        android:visibility="gone">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bhajan_single_category_single_item_holder_layout"
+    android:layout_width="@dimen/dp180"
+    android:layout_height="120dp">
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="@dimen/dp180"
+        android:layout_height="120dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="@dimen/dph5"
+        android:layout_margin="@dimen/dph2">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/curved_rectangle_background_black_no_stroke">
+            <!--<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.6">
+
+
+            </RelativeLayout>-->
+
+            <ImageView
+                android:id="@+id/bhajan_single_category_single_item_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/landscape_placeholder" />
+            <ImageView
+                android:id="@+id/mp3_video_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@mipmap/mp3"
+                android:layout_gravity="bottom"
+                android:visibility="gone"/>
+            <ImageView
+                android:id="@+id/lock_video_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_lock_open_24"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/bhajan_single_category_single_item_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#F69705"
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold"
+                android:text="jcfvashv"
+                android:layout_marginTop="90dp"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/bhajan_single_category_single_item_text_views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp4"
+                android:layout_marginTop="@dimen/dp10"
+                android:maxLines="1"
+                android:textColor="#F69705"
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold"
+                android:text="jcfvashv"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/now_playing_relative_layout"
+            android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/play_btn_bg"
+
+            android:alpha="0.8"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Now Playing"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/colorPrimary"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

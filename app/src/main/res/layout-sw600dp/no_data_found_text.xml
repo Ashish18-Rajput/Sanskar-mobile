@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/l1"
+        android:background="@color/whiteBgColor">
+
+
+<!--    <RelativeLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dph10"
+            android:src="@drawable/ic_left_black"
+            android:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp60"
+            android:layout_toRightOf="@id/back1"
+            android:paddingLeft="@dimen/dp20"
+            android:src="@mipmap/splash_logo" />
+
+                &lt;!&ndash;<ImageView&ndash;&gt;
+                    &lt;!&ndash;android:id="@+id/profile_iv"&ndash;&gt;
+                    &lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;
+                    &lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;
+                    &lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;
+                    &lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;
+                    &lt;!&ndash;android:layout_marginRight="@dimen/dpw10"&ndash;&gt;
+                    &lt;!&ndash;android:src="@mipmap/profile"&ndash;&gt;
+                    &lt;!&ndash;android:visibility="visible" />&ndash;&gt;
+
+
+    </RelativeLayout>-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="No Data Found" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+

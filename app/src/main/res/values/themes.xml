@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/download_bhajan</item>
+        <item name="colorSecondaryVariant">@color/download_bhajan</item>
+        <item name="colorOnSecondary">@color/colorBlack</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/download_bhajan</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.NewCrypt.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.NewCrypt.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

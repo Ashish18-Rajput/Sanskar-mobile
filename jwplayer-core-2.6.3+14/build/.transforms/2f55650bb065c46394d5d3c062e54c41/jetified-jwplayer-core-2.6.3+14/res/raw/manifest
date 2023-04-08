@@ -1,0 +1,22 @@
+# This file must contain an HTML file with a div named 'container' for the player to load
+https://ssl.p.jwpcdn.com/android/2.6.3+14/jwplayer_container.html
+https://ssl.p.jwpcdn.com/android/2.6.3+14/mobile_workarounds.js
+https://ssl.p.jwpcdn.com/player/v/7.8.7/jwplayer.js
+https://ssl.p.jwpcdn.com/android/2.6.3+14/html5_provider_mobile.js
+https://ssl.p.jwpcdn.com/android/2.6.3+14/jw_pings.js
+https://ssl.p.jwpcdn.com/player/v/7.8.7/polyfills.promise.js
+https://ssl.p.jwpcdn.com/player/v/7.8.7/polyfills.vttrenderer.js
+https://ssl.p.jwpcdn.com/player/v/7.8.7/vttparser.js
+https://ssl.p.jwpcdn.com/player/v/7.8.7/vast.js
+https://ssl.p.jwpcdn.com/player/v/7.8.7/jw-icons.ttf
+https://ssl.p.jwpcdn.com/player/v/7.8.7/related.js
+# All CSS files will be copied to the /skins directory
+https://ssl.p.jwpcdn.com/player/v/7.8.7/skins/beelden.css
+https://ssl.p.jwpcdn.com/player/v/7.8.7/skins/bekle.css
+https://ssl.p.jwpcdn.com/player/v/7.8.7/skins/five.css
+https://ssl.p.jwpcdn.com/player/v/7.8.7/skins/glow.css
+https://ssl.p.jwpcdn.com/player/v/7.8.7/skins/roundster.css
+https://ssl.p.jwpcdn.com/player/v/7.8.7/skins/seven.css
+https://ssl.p.jwpcdn.com/player/v/7.8.7/skins/six.css
+https://ssl.p.jwpcdn.com/player/v/7.8.7/skins/stormtrooper.css
+https://ssl.p.jwpcdn.com/player/v/7.8.7/skins/vapor.css

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="450dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dp50"
+    android:background="@color/transparent"
+    android:layout_margin="@dimen/dp10">
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/transparent"
+        android:layout_height="435dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/banner_img"
+        android:src="@mipmap/landscape_placeholder"
+        android:scaleType="fitXY"/>
+
+
+
+    <TextView
+        android:layout_width="@dimen/dp200"
+        android:layout_height="wrap_content"
+        android:text="Please Subscribe to our Premium"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:layout_margin="@dimen/dp20"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_cancel"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/delete_banner_img"/>
+
+</RelativeLayout>

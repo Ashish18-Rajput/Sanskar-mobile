@@ -1,0 +1,16 @@
+com.wowza.gocoder.sdk.android
+attr defaultCamera
+attr frameSizePreset
+attr scaleMode
+id back
+id center
+id crop
+id fill
+id frameSize1280x720
+id frameSize1920x1080
+id frameSize320x240
+id frameSize3840x2160
+id frameSize640x480
+id frameSize960x540
+id front
+styleable WOWZCameraView defaultCamera frameSizePreset scaleMode

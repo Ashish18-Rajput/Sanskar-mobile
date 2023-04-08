@@ -1,0 +1,107 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <!-- Base application theme. -->
+  <!--<style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    &lt;!&ndash; Customize your theme here. &ndash;&gt;
+    <item name="colorPrimary">#fff</item>
+    <item name="colorPrimaryDark">#f2f2f2</item>
+    <item name="colorAccent">#F9AA31</item>
+    <item name="windowActionBar">true</item>
+    <item name="windowNoTitle">true</item>
+
+
+  </style>-->
+
+  <style name="ProgressBarTheme" parent="ThemeOverlay.AppCompat.Light">
+    <item name="colorAccent">@color/colorPrimary</item>
+  </style>
+
+    <!--<style name="AppTheme" parent="android:Theme.Light" />-->
+
+ <!-- <style name="BrightcoveControlBar.Custom">
+    <item name="brightcove_seekbar">true</item>
+    <item name="brightcove_vr_mode">false</item>
+    <item name="brightcove_closed_captions">false</item>
+    <item name="brightcove_rewind">false</item>
+    <item name="brightcove_audio_tracks">false</item>
+    <item name="brightcove_full_screen">true</item>
+
+
+  </style>-->
+  <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+    <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+  </style>
+  <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+    <item name="android:background">@android:color/transparent</item>
+  </style>
+
+
+    <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+    <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>
+  </style>
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+
+    <style name="Widget.TabItem" parent="TextAppearance.Design.Tab">
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:layout_height">18dp</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:maxLines">1</item>
+  </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.DeviceDefault.Spinner">
+    <item name="android:background">@drawable/spinner_bg</item>
+    <item name="android:padding">10dp</item>
+    <item name="android:paddingTop">5dp</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:paddingBottom">5dp</item>
+    <item name="android:paddingRight">25dp</item>
+  </style>
+
+  <style name="Theme.CastVideosDark" parent="Theme.AppCompat.NoActionBar">
+    <item name="colorPrimaryDark">#000000</item>
+    <item name="castMiniControllerStyle">@style/CustomCastMiniController</item>
+    <item name="castIntroOverlayStyle">@style/CustomCastIntroOverlay</item>
+    <item name="castExpandedControllerStyle">@style/CustomCastExpandedController</item>
+    <item name="castExpandedControllerToolbarStyle">
+      @style/ThemeOverlay.AppCompat.Dark.ActionBar
+    </item>
+  </style>
+
+  <style name="CustomCastMiniController" parent="CastMiniController">
+    <item name="castShowImageThumbnail">true</item>
+    <item name="castTitleTextAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+    <item name="castSubtitleTextAppearance">@style/TextAppearance.AppCompat.Caption</item>
+  </style>
+
+  <style name="CustomCastExpandedController" parent="CastExpandedController"/>
+
+  <style name="CustomCastIntroOverlay" parent="CastIntroOverlay">
+    <item name="castButtonTextAppearance">@style/TextAppearance.CustomCastIntroOverlay.Button
+    </item>
+    <item name="castTitleTextAppearance">@style/TextAppearance.CustomCastIntroOverlay.Title
+    </item>
+  </style>
+
+  <style name="TextAppearance.CustomCastIntroOverlay.Button"
+      parent="android:style/TextAppearance">
+    <item name="android:textColor">#FFFFFF</item>
+  </style>
+
+  <style name="TextAppearance.CustomCastIntroOverlay.Title"
+      parent="android:style/TextAppearance.Large">
+    <item name="android:textColor">#FFFFFF</item>
+  </style>
+
+  <style name="CustomCheckbox02" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+    <item name="android:button">@drawable/checkbox_selector</item>
+    <item name="android:background">@android:color/transparent</item>
+  </style>
+
+
+
+</resources>

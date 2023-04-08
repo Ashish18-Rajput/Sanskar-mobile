@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/this_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Enter Mobile No."
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/fillintheblanks"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/this_payment"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_background1"
+        android:gravity="center_vertical"
+        android:inputType="number"
+        android:paddingLeft="8dp"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_proceed1"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/fillintheblanks"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_background2"
+        android:gravity="center"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

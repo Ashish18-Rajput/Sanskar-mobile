@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerDropDownItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/dp10"
+    android:ellipsize="marquee"
+    android:padding="@dimen/dp10"
+    android:shadowRadius="5"
+    android:paddingRight="@dimen/dp5"
+    android:singleLine="true"
+    android:textColor="#FF0D0D0D"
+    android:textAlignment="gravity"
+    android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+

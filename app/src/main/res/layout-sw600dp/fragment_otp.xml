@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fontTxt="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/otp_background"
+    android:orientation="vertical"
+    android:paddingBottom="60dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:padding="@dimen/dp20"
+                android:src="@mipmap/otp_message" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/dp5"
+                    android:text="@string/verify_with_otp"
+                    android:textColor="#E35A6E"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/textView_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/otp_text"
+                    android:textColor="@color/dull_black"
+                    android:textSize="@dimen/sp15" />
+
+                <com.goodiebag.pinview.Pinview
+                    android:id="@+id/fragment_otp_pinview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:visibility="gone"
+                    fontTxt:cursorVisible="true"
+                    fontTxt:inputType="number"
+                    fontTxt:pinHeight="40dp"
+                    fontTxt:pinLength="4"
+                    fontTxt:pinWidth="40dp"></com.goodiebag.pinview.Pinview>
+
+                <com.sanskar.tv.CustomViews.AppEditText
+                    android:id="@+id/pin_hidden_edittext"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@null"
+                    android:contentDescription="@string/pin_content_desc"
+                    android:cursorVisible="false"
+                    android:gravity="center_horizontal"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:password="true"
+                    android:textColor="#00000000" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp15">
+
+                    <com.sanskar.tv.CustomViews.AppEditText
+                        android:id="@+id/OPT1ET"
+                        android:layout_width="@dimen/pad_40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="@dimen/pad_15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gray_btn"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/pad_15dp"
+                        android:paddingTop="@dimen/pad_10dp"
+                        android:paddingRight="@dimen/pad_15dp"
+                        android:paddingBottom="@dimen/pad_10dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/txt_18sp" />
+
+                    <com.sanskar.tv.CustomViews.AppEditText
+                        android:id="@+id/OPT2ET"
+                        android:layout_width="@dimen/pad_40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="@dimen/pad_15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gray_btn"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/pad_15dp"
+                        android:paddingTop="@dimen/pad_10dp"
+                        android:paddingRight="@dimen/pad_15dp"
+                        android:paddingBottom="@dimen/pad_10dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/txt_18sp" />
+
+                    <com.sanskar.tv.CustomViews.AppEditText
+                        android:id="@+id/OPT3ET"
+                        android:layout_width="@dimen/pad_40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="@dimen/pad_15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gray_btn"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/pad_15dp"
+                        android:paddingTop="@dimen/pad_10dp"
+                        android:paddingRight="@dimen/pad_15dp"
+                        android:paddingBottom="@dimen/pad_10dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/txt_18sp" />
+
+                    <com.sanskar.tv.CustomViews.AppEditText
+                        android:id="@+id/OPT4ET"
+                        android:layout_width="@dimen/pad_40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gray_btn"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/pad_15dp"
+                        android:paddingTop="@dimen/pad_10dp"
+                        android:paddingRight="@dimen/pad_15dp"
+                        android:paddingBottom="@dimen/pad_10dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/txt_18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginRight="@dimen/dp40"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:padding="@dimen/dp15"
+                android:text="@string/submit"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/resend_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:gravity="center"
+                android:padding="@dimen/dp20"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/resed_otp"
+                android:textColor="@color/dull_black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/login_with_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:gravity="center"
+                android:padding="@dimen/dp20"
+                android:paddingLeft="20dp"
+                android:visibility="gone"
+                android:paddingRight="20dp"
+                android:text="@string/login_with_pin"
+                android:textColor="@color/dull_black"
+                android:textSize="15sp" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/sign_up_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <include
+                android:id="@+id/toolbar_signup"
+                layout="@layout/toolbar" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar_signup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp10"
+                android:src="@mipmap/sign_up_welcome" />
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView3"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp40"
+                android:layout_marginEnd="@dimen/dp10"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/countryCodeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:padding="2dp"
+                        android:visibility="visible"
+                        app:ccpDialog_allowSearch="true"
+                        app:ccp_autoDetectCountry="true"
+                        app:ccp_showFlag="true"
+                        app:ccp_showFullName="false"
+                        app:ccp_showNameCode="true"
+                        app:ccp_showPhoneCode="false"
+                        app:ccp_textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/iso_text"
+                        android:layout_width="@dimen/dp80"
+                        android:layout_height="@dimen/dp50"
+                        android:gravity="center"
+                        android:text="IN"
+                        android:textColor="@color/bottom_nav_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                    <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dp90"
+                        android:hint="@string/mobile"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/email_profile1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:focusable="true"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/newLoginLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView3"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp10">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccpNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:backgroundTint="@color/download_bhajan"
+                    android:padding="2dp"
+                    android:visibility="visible"
+                    app:ccpDialog_allowSearch="true"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_showFlag="true"
+                    app:ccp_showFullName="false"
+                    app:ccp_showNameCode="true"
+                    app:ccp_showPhoneCode="true"
+                    app:ccp_textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/mobileTextInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ccpNew"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:textColorHint="@color/download_bhajan"
+                    app:boxStrokeColor="@color/download_bhajan"
+                    app:hintTextColor="@color/download_bhajan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mobileEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mobile"
+                        android:inputType="number"
+                        android:maxLength="13"
+                        android:textColor="@color/download_bhajan"
+                        android:textColorHint="@color/download_bhajan"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/intro_or_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mobileTextInputLayout"
+                    android:layout_marginTop="@dimen/dp35"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="7">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/line_signup" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="OR"
+                        android:textColor="@color/download_bhajan"
+                        android:textSize="@dimen/sp13"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/line_signup" />
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailTextInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/intro_or_line"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp35"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:textColorHint="@color/download_bhajan"
+                    app:boxStrokeColor="@color/download_bhajan"
+                    app:hintTextColor="@color/download_bhajan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/download_bhajan"
+                        android:textColorHint="@color/download_bhajan"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relativeLayout2"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp40"
+                android:layout_marginEnd="@dimen/dp10"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/checkbox_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5" />
+
+                <TextView
+                    android:id="@+id/tnc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@id/checkbox_terms"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/checkbox_terms"
+                    android:layout_marginLeft="@dimen/dp5" />
+
+                <TextView
+                    android:id="@+id/tnc1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/checkbox_terms"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@id/checkbox_policy"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/send_otp"
+                android:layout_width="@dimen/dp200"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/newLoginLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dp25"
+                android:layout_marginTop="@dimen/dp50"
+                android:layout_marginEnd="@dimen/dp25"
+                android:background="@drawable/button_background2"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:visibility="gone"
+                android:text="Submit (with pin)"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/intro_or_line_1"
+                android:layout_width="@dimen/dp200"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/send_otp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp35"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="7">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/line_signup" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="OR"
+                    android:textColor="@color/download_bhajan"
+                    android:textSize="@dimen/sp13"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/line_signup" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/send_otp_with_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/intro_or_line_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dp50"
+                android:layout_marginTop="@dimen/dp40"
+                android:layout_marginEnd="@dimen/dp50"
+                android:layout_marginBottom="@dimen/dp20"
+                android:background="@drawable/button_background2"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="Submit"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

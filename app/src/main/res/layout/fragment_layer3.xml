@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/player_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp250"
+                android:background="@android:color/background_dark"
+                android:visibility="visible"
+                app:controller_layout_id="@layout/custom_controller_2"
+                app:fastforward_increment="10000"
+                app:hide_on_touch="true"
+                app:player_layout_id="@layout/exo_simple_player_view"
+                app:resize_mode="fill"
+                app:rewind_increment="10000"
+                app:show_timeout="5000"
+                app:use_controller="true" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:theme="@style/ProgressBarTheme" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/playerView"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/video_basic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/video_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/video_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp5"
+                            android:text="Krishna Bhagwat"
+                            android:textColor="#000"
+                            android:textSize="@dimen/sp16"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/video_title"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:background="#CEBAB4B4" />
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:justificationMode="inter_word"
+                            android:text="kfwdfusdyi ugsdxcgsg sgxgsdfgisiusf safdsfgsag asfdiusafi sfuigsf sgfisgf sdgfsgf sfgsdjf  fsajkhasjhsaf"
+                            android:textColor="@color/dull_black" />
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_premium"
+                            android:layout_width="210dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:background="@drawable/button_background3"
+                            android:gravity="center"
+                            android:text="Go Premium"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/episodesRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/video_basic">
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:theme="@style/ProgressBarTheme" />
+
+                    <TextView
+                        android:id="@+id/episodeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="12dp"
+                        android:text="EPISODES"
+                        android:textColor="#000"
+                        android:textSize="@dimen/sp14"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/episodeTV"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="10dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_view_all"
+                        android:layout_width="210dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/recyclerView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/dph10"
+                        android:background="@drawable/button_background2"
+                        android:gravity="center"
+                        android:text="View All Episodes"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/moreLikeRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/episodesRL"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/moreLikeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="More like this"
+                        android:textColor="#000"
+                        android:textSize="@dimen/sp14"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/moreLikeTV"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/moreLikeIV"
+
+                        android:background="@drawable/gradient_line" />
+
+
+                    <ImageView
+                        android:id="@+id/moreLikeIV"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="6dp"
+                        android:src="@mipmap/see_all" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/moreLikeRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view1"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="10dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+</RelativeLayout>

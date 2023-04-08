@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/dp10"
+    app:cardCornerRadius="@dimen/dp10"
+    app:cardElevation="@dimen/dp10">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background1"
+        android:padding="15dp"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/first_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/firstTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp8"
+            android:layout_toStartOf="@id/first_rupee"
+            android:layout_toEndOf="@id/first_radioButton"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="1 Month Plan"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/first_rupee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="Rs 20"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

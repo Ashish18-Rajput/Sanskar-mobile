@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout should be used as a dummy layout in editor time
+ Usage: Add xmlns:tools="http://schemas.android.com/tools" to your xml file
+ and then add tools:layout="@layout/jw_player_fragment_sample_layout" to your fragment
+ -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@android:color/black">
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:src="@drawable/jw_play_button"/>
+</RelativeLayout>

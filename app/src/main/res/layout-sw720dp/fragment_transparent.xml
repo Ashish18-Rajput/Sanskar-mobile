@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.HomeModule.Fragment.TransparentFragment"
+    android:background="@color/transparent">
+
+<!--<RelativeLayout
+    android:layout_width="@dimen/dph55"
+    android:layout_height="match_parent"
+    android:background="#F9F9FA">
+
+</RelativeLayout>-->
+   <!-- <RelativeLayout
+        android:layout_width="@dimen/dph55"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:layout_alignParentRight="true">
+
+    </RelativeLayout>-->
+
+</RelativeLayout>

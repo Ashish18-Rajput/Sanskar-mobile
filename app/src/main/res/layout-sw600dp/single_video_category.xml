@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+    >
+   <!-- <RelativeLayout
+        android:id="@+id/single_video_cat"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp30"
+        android:layout_margin="@dimen/dp5"
+        >-->
+<TextView
+    android:id="@+id/video_cat_name"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp25"
+    android:text="@string/video_cat_name"
+    android:background="@drawable/chat_curved"
+    android:paddingHorizontal="@dimen/dp10"
+    android:textColor="#888080"
+    android:layout_margin="@dimen/dp5"
+    android:layout_centerInParent="true">
+
+</TextView>
+ <!--   </RelativeLayout>-->
+</RelativeLayout>

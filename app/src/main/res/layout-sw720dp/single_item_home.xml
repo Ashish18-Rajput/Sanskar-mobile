@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_view_card"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dph5"
+        app:cardCornerRadius="@dimen/dph3"
+        app:cardElevation="@dimen/dph3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/single_item_layout_video">
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/relative_layout_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="2dp"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingBottom="@dimen/dp10"
+                app:cardCornerRadius="@dimen/dph7"
+                app:layout_constraintVertical_bias="0.5">
+
+
+
+                <ImageView
+                    android:id="@+id/artist_image_single_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp230"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@mipmap/landscape_placeholder" />
+
+              <!--  <ImageView
+                    android:id="@+id/mp3_video_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/video"
+                    android:visibility="visible" />
+-->
+                <ImageView
+                    android:id="@+id/bt_play_video"
+                    android:layout_width="@dimen/dph50"
+                    android:layout_height="@dimen/dph50"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@mipmap/white_play">
+
+                </ImageView>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/channel_name_single_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Sanskar"
+                android:textColor="@color/text_color_1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/relative_layout_profile"
+                app:layout_constraintTop_toBottomOf="@+id/relative_layout_profile" />
+
+            <TextView
+                android:id="@+id/description_single_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="@dimen/dp2"
+                android:text="@string/dummy_text"
+                android:textColor="@color/text_color_3"
+                android:textSize="@dimen/sp13"
+                android:ellipsize="end"
+                android:maxLines="2"
+               app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/relative_layout_profile"
+                app:layout_constraintTop_toBottomOf="@+id/channel_name_single_item" />
+
+            <TextView
+                android:id="@+id/date_single_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp5"
+                android:text="Mon 08 Jan, 2018 02:40 pm"
+                android:textColor="@color/text_color_4"
+                android:textSize="10sp"
+                app:layout_constraintTop_toBottomOf="@+id/description_single_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/views_number_single_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp5"
+                android:text="+5k views"
+                android:textColor="@color/text_color_4"
+                android:textSize="10sp"
+                android:layout_marginRight="@dimen/dp13"                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/description_single_item"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/main_view_card"
+        android:background="@color/calenderBgColor">
+
+    </View>
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/layout_bg_color">
+    <LinearLayout
+        android:id="@+id/ll_selection_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/dp50"
+        android:layout_marginRight="@dimen/dp50"
+        android:layout_marginTop="@dimen/dp5"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/textaudios"
+            android:text="Audios"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_18sp"/>
+
+        <View
+            android:layout_width="@dimen/dp1"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlack"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textvideos"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:textStyle="bold"
+            android:layout_weight="0.5"
+            android:textColor="@color/colorBlack"
+            android:text="Videos"
+            android:textSize="@dimen/txt_18sp"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_selection_playlist"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dph10"/>
+
+    <TextView
+        android:id="@+id/no_data_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data_found"
+        android:textColor="#aa000000"
+        android:textSize="20sp"
+        android:layout_below="@+id/ll_selection_playlist"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

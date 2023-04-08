@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg_color">
+
+    <include layout="@layout/toolbar2"
+        android:id="@+id/toobar_view_all_videos"/>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe_refresh_home"
+        android:layout_below="@id/toobar_view_all_videos">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollIndicators="none"
+            android:scrollbars="none"
+            android:id="@+id/scroll_view_home">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/trending_video"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="@string/trending_now"-->
+                        <!--android:layout_marginTop="20dp"-->
+                        <!--android:layout_marginBottom="10dp"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:textSize="15sp"-->
+                        <!--android:textColor="@color/text_color_1" />-->
+
+                    <!--<android.support.v7.widget.RecyclerView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/fragment_home_rv_live_channel"-->
+                        <!--android:overScrollMode="never"-->
+                        <!--android:background="@drawable/bottom_stroke_bg2"-->
+                        <!--android:paddingBottom="10dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/recently_view"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="@string/recently_viewed"-->
+                        <!--android:layout_marginTop="20dp"-->
+                        <!--android:layout_marginBottom="10dp"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:textSize="15sp"-->
+                        <!--android:textColor="@color/text_color_1" />-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/fragment_home_rv_videos_by_category"
+                        android:overScrollMode="never"
+                        android:layout_marginBottom="@dimen/dph10"/>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <include layout="@layout/no_data_found_text"
+        android:id="@+id/no_data_found_home"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone"/>
+</RelativeLayout>

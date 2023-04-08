@@ -1,0 +1,102 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:fontTxt="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardWhiteColor">
+
+    <com.sanskar.tv.CustomViews.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:backgroundColor="@android:color/black"
+        custom:frameColor="@android:color/white"
+        custom:frameStrokeWeight="1dp"
+        custom:guideColor="@android:color/white"
+        custom:guideShowMode="show_on_touch"
+        custom:guideStrokeWeight="1dp"
+        custom:handleColor="@android:color/white"
+        custom:handleShowMode="show_always"
+        custom:handleSize="8dp"
+        custom:minFrameSize="50dp"
+        custom:overlayColor="@color/cardview_dark_background"
+        custom:touchPadding="8dp">
+    </com.sanskar.tv.CustomViews.CropImageView>
+
+    <LinearLayout
+        android:id="@+id/cropFooter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/buttonCancleCrop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/cardWhiteColor"
+            android:textSize="@dimen/sp15"/>
+
+        <View
+            android:layout_width="@dimen/dph0.5"
+            android:layout_height="match_parent"
+            android:background="@color/cardWhiteColor"
+            android:paddingBottom="@dimen/dp4"
+            android:paddingTop="@dimen/dp4" />
+
+        <TextView
+            android:id="@+id/rotate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Rotate"
+            android:textAllCaps="false"
+            android:textColor="@color/cardWhiteColor"
+            android:textSize="@dimen/sp15"
+            />
+
+        <View
+            android:layout_width="@dimen/dph0.5"
+            android:layout_height="match_parent"
+            android:background="@color/cardWhiteColor"
+            android:paddingBottom="@dimen/dp4"
+            android:paddingTop="@dimen/dp4" />
+
+        <TextView
+            android:id="@+id/buttonSaveImage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/cardWhiteColor"
+            android:textSize="@dimen/sp15"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/imageProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+
+        <com.sanskar.tv.CustomViews.ProgressWheel
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

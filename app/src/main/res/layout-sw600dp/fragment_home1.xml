@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_home1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.HomeModule.Fragment.HomeFragment1">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/headerrel">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/intro_images_layout"
+                android:background="#000000"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/videoImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp250"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/landscape_placeholder" />
+
+
+                <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                    android:id="@+id/player_view_exo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp250"
+                    android:background="@android:color/background_dark"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    app:controller_layout_id="@layout/custom_controller_exoplayer"
+                    app:fastforward_increment="10000"
+                    app:hide_on_touch="true"
+                    app:player_layout_id="@layout/exo_simple_player_view"
+                    app:resize_mode="fill"
+                    app:rewind_increment="10000"
+                    app:show_timeout="5000"
+                    app:use_controller="true"
+                    app:surface_type="surface_view"/>
+
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp250"
+                    android:id="@+id/player_view_exo_ads"
+                    app:resize_mode="fill"
+                    app:hide_on_touch="false"
+                    app:show_timeout="0"
+                    app:use_controller="true"
+                    android:visibility="gone"
+                    android:background="@android:color/background_dark"
+                    app:player_layout_id="@layout/exo_simple_player_view_ads"
+                    app:controller_layout_id="@layout/custom_controller_exoplayer_ads"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:theme="@style/ProgressBarTheme"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/more_option"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp30"
+
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:id="@+id/like_channel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginRight="@dimen/dp5"
+                            android:gravity="center"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/like"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp20"
+                                android:src="@mipmap/white_like" />
+
+                            <TextView
+                                android:id="@+id/like_number_watch_channel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp5"
+                                android:layout_marginTop="@dimen/dp2"
+                                android:layout_toRightOf="@+id/like"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text="Like"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/Comment_channel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/Comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp20"
+                            android:src="@drawable/ic_baseline_remove_red_eye_24" />
+
+                        <TextView
+                            android:id="@+id/comment_number_watch_channel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp2"
+                            android:layout_toRightOf="@+id/Comment"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/playIconIV"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/white_play"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_homefrag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/headerrel"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layoutAnimation="@anim/layout_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

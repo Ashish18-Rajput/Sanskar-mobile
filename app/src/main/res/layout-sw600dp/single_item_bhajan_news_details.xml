@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/dp20">-->
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scaleType="fitXY"
+        android:paddingTop="@dimen/dp5"
+        android:id="@+id/ll_news"
+        android:layout_centerHorizontal="true"
+      >
+
+        <TextView
+            android:id="@+id/news_heading_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_text_long"
+            android:textSize="@dimen/sp14"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:justificationMode="inter_word"
+            android:textColor="@color/colorBlack"
+            android:drawableRight="@mipmap/share_gray"/>
+
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp12" />
+        <ImageView
+            android:id="@+id/news_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dph150"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:scaleType="fitXY"/>
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+        >
+
+
+        <TextView
+            android:id="@+id/news_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp13"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:justificationMode="inter_word"
+            android:text="@string/dummy_text_long2"
+            android:autoLink="web" />
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

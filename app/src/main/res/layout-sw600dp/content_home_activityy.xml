@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".module.HomeModule.Activity.HomeActivityy"
+    tools:showIn="@layout/app_bar_home_activityy">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.sanskar.tv.CustomViews.AppTextView
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dph18"
+            android:layout_marginEnd="@dimen/dph5"
+            android:text="Cancel"
+            android:visibility="gone" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/search_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dpw10"
+            android:layout_marginTop="@dimen/dph10"
+            android:layout_marginRight="@dimen/dpw10"
+            android:layout_toLeftOf="@id/cancel_button"
+            app:cardCornerRadius="@dimen/dph5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/home_search_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/search_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:src="@drawable/ic_search_black" />
+
+                <TextView
+                    android:id="@+id/text_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dpw5"
+                    android:layout_toEndOf="@id/search_iv"
+                    android:hint="Search"
+                    android:textSize="@dimen/sp16" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:id="@+id/container_layout_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/playerlayout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp100"
+            android:layout_centerInParent="true"
+            android:background="#00000000"
+            android:visibility="gone">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_l1"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="130dp"
+            android:layout_marginBottom="56dp"
+            android:visibility="gone">
+
+           <!-- <com.brightcove.player.view.BrightcoveExoPlayerVideoView
+                android:id="@+id/playerView2"
+                android:layout_width="180dp"
+                android:layout_height="115dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true">
+
+            </com.brightcove.player.view.BrightcoveExoPlayerVideoView>-->
+
+            <ProgressBar
+                android:id="@+id/progressvideo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="65dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_l2"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="130dp"
+            android:layout_marginBottom="56dp"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/playerViewyoutube2"
+                android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+                android:layout_width="180dp"
+                android:layout_height="115dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true" />
+
+            <ProgressBar
+                android:id="@+id/progressvideoutube2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="65dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/playerlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_above="@+id/bottom_navigation"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/thumbaudio1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:padding="@dimen/dp2"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher_round" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/thumbaudio1"
+                android:weightSum="3"
+                android:layout_marginRight="@dimen/dp5">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.7"
+                    android:layout_marginLeft="@dimen/dp10"
+
+                    >
+                    <TextView
+                        android:id="@+id/titleaudio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_marginTop="@dimen/dp10"
+                        android:clickable="false"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp2"
+                        android:text="Song is here" />
+
+                    <TextView
+                        android:id="@+id/descriptionaudio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titleaudio1"
+
+
+
+                        android:clickable="false"
+                        android:maxLength="30"
+                        android:padding="@dimen/dp2"
+                        android:text="Song is here" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3">
+
+                    <ImageView
+                        android:id="@+id/backward1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+
+                        android:layout_toLeftOf="@+id/playpauseview1"
+
+                        android:clickable="true"
+
+                        android:src="@mipmap/backward" />
+                    <ImageView
+                        android:id="@+id/playpauseview1"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/forward1"
+                        android:clickable="true"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:layout_marginLeft="@dimen/dp8"
+                        android:src="@mipmap/audio_pause" />
+                    <ImageView
+                        android:id="@+id/forward1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toLeftOf="@id/img_cancel1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:clickable="true"
+
+                        android:src="@mipmap/forward_arrow" />
+                    <ImageView
+                        android:id="@+id/img_cancel1"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+
+
+
+
+                        android:src="@drawable/ic_cancel" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+            <!-- <TextView
+                 android:id="@+id/titleaudio1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginStart="@dimen/dp5"
+                 android:layout_marginTop="@dimen/dp15"
+                 android:layout_toEndOf="@+id/thumbaudio1"
+                 android:clickable="false"
+                 android:maxLength="25"
+                 android:padding="@dimen/dp2"
+                 android:text="Song is here" />
+
+             <TextView
+                 android:id="@+id/descriptionaudio1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/titleaudio1"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginStart="@dimen/dp5"
+                 android:layout_toEndOf="@+id/thumbaudio1"
+                 android:clickable="false"
+                 android:maxLength="30"
+                 android:padding="@dimen/dp2"
+                 android:text="Song is here" />
+
+             <ImageView
+                 android:id="@+id/playpauseview1"
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:layout_alignParentEnd="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginStart="@dimen/dp2"
+                 android:layout_marginEnd="@dimen/dp50"
+                 android:clickable="true"
+                 android:padding="@dimen/dp5"
+                 android:src="@drawable/pause" />
+
+             <ImageView
+                 android:id="@+id/img_cancel1"
+                 android:layout_width="@dimen/dp30"
+                 android:layout_height="@dimen/dp30"
+                 android:layout_alignParentEnd="true"
+                 android:layout_centerInParent="true"
+                 android:layout_marginEnd="@dimen/dp10"
+                 android:padding="@dimen/dp2"
+                 android:src="@drawable/ic_cancel" />-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/playerlayout2"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_above="@+id/bottom_navigation"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/thumbaudio2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:padding="@dimen/dp2"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher_round" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/thumbaudio2"
+                android:weightSum="3"
+                android:layout_marginRight="@dimen/dp5">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.7"
+                    android:layout_marginLeft="@dimen/dp10"
+
+                    >
+                    <TextView
+                        android:id="@+id/titleaudio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_marginTop="@dimen/dp10"
+                        android:clickable="false"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp2"
+                        android:text="Song is here" />
+
+                    <TextView
+                        android:id="@+id/descriptionaudio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titleaudio2"
+
+
+
+                        android:clickable="false"
+                        android:maxLength="30"
+                        android:padding="@dimen/dp2"
+                        android:text="Song is here" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3">
+
+                    <ImageView
+                        android:id="@+id/backward2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+
+                        android:layout_toLeftOf="@+id/playpauseview2"
+
+                        android:clickable="true"
+
+                        android:src="@mipmap/backward" />
+                    <ImageView
+                        android:id="@+id/playpauseview2"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/forward2"
+                        android:clickable="true"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:layout_marginLeft="@dimen/dp8"
+                        android:src="@mipmap/audio_pause" />
+                    <ImageView
+                        android:id="@+id/forward2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toLeftOf="@id/img_cancel2"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:clickable="true"
+
+                        android:src="@mipmap/forward_arrow" />
+                    <ImageView
+                        android:id="@+id/img_cancel2"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+
+
+
+
+                        android:src="@drawable/ic_cancel" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+            <!--<TextView
+                android:id="@+id/titleaudio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_toEndOf="@+id/thumbaudio2"
+                android:clickable="false"
+                android:maxLength="25"
+                android:padding="@dimen/dp2"
+                android:text="Song is here"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/descriptionaudio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleaudio2"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_toEndOf="@+id/thumbaudio2"
+                android:clickable="false"
+                android:maxLength="30"
+                android:padding="@dimen/dp2"
+                android:text="Song is here" />
+             <ImageView
+               android:id="@+id/backward2"
+               android:layout_width="25dp"
+               android:layout_height="25dp"
+               android:layout_centerVertical="true"
+               android:layout_toLeftOf="@+id/playpauseview2"
+                 android:clickable="true"
+                 android:layout_marginRight="@dimen/dp8"
+                 android:src="@mipmap/backward" />
+           <ImageView
+               android:id="@+id/playpauseview2"
+               android:layout_width="@dimen/dp30"
+               android:layout_height="@dimen/dp30"
+               android:layout_centerVertical="true"
+               android:layout_toLeftOf="@+id/forward2"
+               android:layout_marginRight="@dimen/dp8"
+               android:clickable="true"
+               android:src="@mipmap/audio_pause" />
+           <ImageView
+               android:id="@+id/forward2"
+               android:layout_width="25dp"
+               android:layout_height="25dp"
+
+
+               android:layout_alignParentEnd="true"
+               android:layout_centerVertical="true"
+               android:layout_marginEnd="@dimen/dp50"
+               android:clickable="true"
+               android:src="@mipmap/forward_arrow" />-->
+
+            <!-- <ImageView
+                 android:id="@+id/playpauseview2"
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:layout_alignParentEnd="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginStart="@dimen/dp2"
+                 android:layout_marginEnd="@dimen/dp50"
+                 android:clickable="true"
+                 android:padding="@dimen/dp5"
+                 android:src="@drawable/pause" />-->
+
+            <!--  <ImageView
+                  android:id="@+id/img_cancel2"
+                  android:layout_width="@dimen/dp30"
+                  android:layout_height="@dimen/dp30"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerInParent="true"
+                  android:layout_marginEnd="@dimen/dp10"
+                  android:padding="@dimen/dp2"
+                  android:src="@drawable/ic_cancel" />-->
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/playerlayout3"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_above="@+id/bottom_navigation"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/thumbaudio3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:padding="@dimen/dp2"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher_round" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/thumbaudio3"
+                android:weightSum="3"
+                android:layout_marginRight="@dimen/dp5">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.7"
+                    android:layout_marginLeft="@dimen/dp10"
+
+                    >
+                    <TextView
+                        android:id="@+id/titleaudio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_marginTop="@dimen/dp10"
+                        android:clickable="false"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp2"
+                        android:text="Song is here" />
+
+                    <TextView
+                        android:id="@+id/descriptionaudio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titleaudio3"
+
+
+
+                        android:clickable="false"
+                        android:maxLength="30"
+                        android:padding="@dimen/dp2"
+                        android:text="Song is here" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3">
+
+                    <ImageView
+                        android:id="@+id/backward3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+
+                        android:layout_toLeftOf="@+id/playpauseview3"
+
+                        android:clickable="true"
+
+                        android:src="@mipmap/backward" />
+                    <ImageView
+                        android:id="@+id/playpauseview3"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/forward3"
+                        android:clickable="true"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:layout_marginLeft="@dimen/dp8"
+                        android:src="@mipmap/audio_pause" />
+                    <ImageView
+                        android:id="@+id/forward3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toLeftOf="@id/img_cancel3"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:clickable="true"
+
+                        android:src="@mipmap/forward_arrow" />
+                    <ImageView
+                        android:id="@+id/img_cancel3"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+
+
+
+
+                        android:src="@drawable/ic_cancel" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+            <!--        <TextView
+                        android:id="@+id/titleaudio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:layout_toEndOf="@+id/thumbaudio3"
+                        android:clickable="false"
+                        android:maxLength="25"
+                        android:padding="@dimen/dp2"
+                        android:text="Song is here"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/descriptionaudio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titleaudio3"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_toEndOf="@+id/thumbaudio3"
+                        android:clickable="false"
+                        android:maxLength="30"
+                        android:padding="@dimen/dp2"
+                        android:text="Song is here" />
+                                 <ImageView
+                                   android:id="@+id/backward3"
+                                   android:layout_width="25dp"
+                                   android:layout_height="25dp"
+                                   android:layout_centerVertical="true"
+
+                                   android:layout_toLeftOf="@+id/playpauseview3"
+                                   android:clickable="true"
+                                  android:layout_marginRight="@dimen/dp8"
+                                   android:src="@mipmap/backward" />
+                               <ImageView
+                                   android:id="@+id/playpauseview3"
+                                   android:layout_width="@dimen/dp30"
+                                   android:layout_height="@dimen/dp30"
+                                   android:layout_centerVertical="true"
+                                   android:layout_toLeftOf="@+id/forward3"
+                                 android:layout_marginRight="@dimen/dp8"
+                                   android:clickable="true"
+
+                                   android:src="@mipmap/audio_pause" />
+                               <ImageView
+                                   android:id="@+id/forward3"
+                                   android:layout_width="25dp"
+                                   android:layout_height="25dp"
+                                   android:layout_alignParentEnd="true"
+                                   android:layout_centerVertical="true"
+
+                                   android:layout_marginEnd="@dimen/dp50"
+                                   android:clickable="true"
+
+                                   android:src="@mipmap/forward_arrow" />
+
+                  &lt;!&ndash;  <ImageView
+                        android:id="@+id/playpauseview3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp2"
+                        android:layout_marginEnd="@dimen/dp50"
+                        android:clickable="true"
+                        android:padding="@dimen/dp5"
+                        android:src="@mipmap/audio_pause" />
+        &ndash;&gt;
+                    <ImageView
+                        android:id="@+id/img_cancel3"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:padding="@dimen/dp2"
+                        android:src="@drawable/ic_cancel" />-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/playerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_above="@+id/bottom_navigation"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/thumbaudio"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:padding="@dimen/dp2"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher_round" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/thumbaudio"
+                android:weightSum="3"
+                android:layout_marginRight="@dimen/dp5">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.7"
+                    android:layout_marginLeft="@dimen/dp10"
+
+                    >
+                    <TextView
+                        android:id="@+id/titleaudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/dp10"
+
+                        android:clickable="false"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp2"
+                        android:text="Song is here" />
+
+                    <TextView
+                        android:id="@+id/descriptionaudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titleaudio"
+
+
+
+                        android:clickable="false"
+                        android:maxLength="30"
+                        android:padding="@dimen/dp2"
+                        android:text="Song is here" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3">
+
+                    <ImageView
+                        android:id="@+id/backward"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+
+                        android:layout_toLeftOf="@+id/playpauseview"
+
+                        android:clickable="true"
+
+                        android:src="@mipmap/backward" />
+                    <ImageView
+                        android:id="@+id/playpauseview"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/forwad"
+                        android:clickable="true"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:layout_marginLeft="@dimen/dp8"
+                        android:src="@mipmap/audio_pause" />
+                    <ImageView
+                        android:id="@+id/forwad"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toLeftOf="@id/img_cancel"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:clickable="true"
+
+                        android:src="@mipmap/forward_arrow" />
+                    <ImageView
+                        android:id="@+id/img_cancel"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+
+
+
+
+                        android:src="@drawable/ic_cancel" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+
+            <!--      <ImageView
+                      android:id="@+id/playpauseview"
+                      android:layout_width="50dp"
+                      android:layout_height="50dp"
+                      android:layout_alignParentEnd="true"
+                      android:layout_centerVertical="true"
+                      android:layout_marginStart="@dimen/dp2"
+                      android:layout_marginEnd="@dimen/dp50"
+                      android:clickable="true"
+                      android:padding="@dimen/dp5"
+                      android:src="@drawable/pause" />
+      -->
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dph50"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/gradient_background_flat_new"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="visible"
+            app:itemBackground="@color/whiteBgColor"
+            app:itemTextColor="@android:color/black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dph5"
+
+                android:layout_marginBottom="@dimen/dph3"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:id="@+id/home_bottom_nav"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:src="@mipmap/home_active" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home"
+                        android:textColor="@color/colorAccent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/video_bottom_nav"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:src="@mipmap/bottom_videos_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/videos" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/blank_space_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/blank_space_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/premiumLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="29dp"
+                        android:src="@mipmap/premium_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/premium" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/live_channel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:id="@+id/floatingActionButton1"
+                        android:src="@mipmap/live_tv" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/liveTV" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bhajan_bottom_nav"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:src="@mipmap/bottom_bhajan_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bhajan" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/guru_bottom_nav"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:src="@mipmap/bottom_default_news" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/article_bottom_nav"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@mipmap/live_inactive" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Live" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/floatingbutton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dph40"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp20"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/floatingActionButton"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:src="@mipmap/live_tv"
+            app:elevation="8dp"
+            app:layout_constraintVertical_bias="0.5">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.HomeModule.Fragment.ActiveDevicesFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Active Devices"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginBottom="@dimen/dp20"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/dp10"
+        android:id="@+id/title"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activeDevicesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10" />
+    <Button
+        android:id="@+id/detachDevicesBTn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        android:text="Detach Selected Devices"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/buttonsAppTheme"
+        android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/no_data_found_rl"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp15"
+            android:id="@+id/imageView"
+            android:src="@mipmap/splash_logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp15"
+            android:text="   No Device Found \n\nकोई उपकरण नहीं मिला"
+            android:textSize="18sp"
+            android:textColor="@color/download_bhajan"
+            android:textStyle="bold"
+            android:layout_below="@id/imageView"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

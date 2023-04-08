@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/parentlayout"
+    android:padding="@dimen/dp2"
+    android:orientation="vertical">
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_margin="@dimen/dp10"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/dph120"
+        android:layout_height="@dimen/dp90"
+        android:id="@+id/thumbnail"
+        android:scaleType="fitXY"
+        android:src="@mipmap/landscape_placeholder"/>
+
+
+
+        <ImageView
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/pad_40dp"
+            android:id="@+id/imgvideo"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@mipmap/video"/>
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Song Title"
+        android:id="@+id/titlesong"
+        android:layout_marginLeft="@dimen/dp5"
+        android:textColor="@color/colorBlack"
+        android:maxLines="2"
+        android:textSize="@dimen/sp12"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 MB"
+            android:id="@+id/textsize"
+            android:textSize="@dimen/sp14"
+            android:layout_marginLeft="@dimen/dp5"/>
+
+
+        <ImageView
+            android:id="@+id/delete_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:src="@drawable/ic_cancel"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#34000000"/>
+
+</LinearLayout>

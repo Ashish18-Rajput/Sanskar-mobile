@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:background="@color/layout_bg_color">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/swipe_refresh_videos">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollIndicators="none"
+        android:scrollbars="none"
+        android:id="@+id/parent_videos">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/parent_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/dph10"
+                android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/intro_images_layout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp">
+
+                <com.sanskar.tv.CustomViews.AppViewPager
+                    android:id="@+id/image_switcher_view_pager_videos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dpw7"
+                    android:layout_marginRight="@dimen/dpw7"/>
+
+                <LinearLayout
+                    android:id="@+id/image_slider_dots_home_videos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal" />
+
+
+            </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/parent_recycler_view">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_videos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:visibility="visible"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progress_layout"
+                    android:visibility="gone"
+                    android:layout_alignParentBottom="true">
+
+                    <ProgressBar
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="@dimen/dp40"
+                        android:theme="@style/ProgressBarTheme"
+                        android:id="@+id/progressBar"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible"/>
+                    <!--<ProgressBar
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="@dimen/dp40"
+                        android:id="@+id/progressBar"
+                        android:layout_centerHorizontal="true"
+
+                        android:visibility="visible"/>-->
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+    android:id="@+id/no_data_found_view_all"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data_found"
+        android:textStyle="normal"
+        android:textColor="#aa000000"
+        android:textSize="@dimen/sp15"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dph80" />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout_channel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:layout_margin="@dimen/dph10"
+    android:background="@color/whiteBgColor">
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/horizontal_layout_channel"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:gravity="center_vertical">-->
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+        <!--android:id="@+id/channel_img"-->
+        <!--android:layout_width="@dimen/dph60"-->
+        <!--android:layout_height="@dimen/dph60"-->
+        <!--android:src="@mipmap/dummy_big"-->
+        <!--android:layout_marginTop="@dimen/dph10"-->
+        <!--android:layout_marginLeft="@dimen/dpw10"-->
+        <!--android:layout_marginRight="@dimen/dpw10"/>-->
+
+    <!--<com.sanskar.sanskartv.CustomViews.AppTextView-->
+        <!--android:id="@+id/channel_name_tv"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Sanskar"-->
+        <!--android:textSize="@dimen/sp14"/>-->
+
+    <!--</LinearLayout>-->
+</LinearLayout>

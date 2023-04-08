@@ -1,0 +1,33 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:padding="16dp"
+    android:background="@color/layout_dark_bg_color"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_left_black"
+        android:layout_centerVertical="true"
+        android:id="@+id/back"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp18"
+            android:text="@string/comments"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:id="@+id/bhajan_name_toolbar3"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

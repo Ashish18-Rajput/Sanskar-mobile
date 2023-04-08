@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/sign_up_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/intro_or_line"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dph10"
+        android:weightSum="4">
+
+
+        <ImageView
+            android:id="@+id/intro_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dph10"
+            android:layout_weight="0.8"
+            android:src="@mipmap/splash_logo" />
+
+        <TextSwitcher
+            android:id="@+id/text_switcher_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intro_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dph30"
+            android:foregroundGravity="center"
+            android:minHeight="@dimen/dph130"
+            android:padding="@dimen/dph20"
+            android:visibility="gone" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/text_switcher_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/intro_image"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dph15"
+            android:layout_weight="2" />
+
+        <!--<com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:gravity="bottom"
+                android:padding="10dip"
+                app:centered="true"
+                app:fillColor="#1E6D94"
+                app:pageColor="#fff"
+                app:snap="false"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/text_switcher_view_pager"
+
+                />-->
+
+        <include
+            android:id="@+id/intro_indicators"
+            layout="@layout/intro_indicators"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_switcher_view_pager"
+            android:layout_gravity="center" />
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayout2"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp40"
+            android:layout_marginEnd="@dimen/dp10">
+
+            <CheckBox
+                android:id="@+id/checkbox_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_marginLeft="@dimen/dp5" />
+
+            <TextView
+                android:id="@+id/tnc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="@dimen/dp12"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@id/checkbox_terms"
+                android:textColor="#1164A6"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_below="@id/checkbox_terms"
+                android:layout_marginLeft="@dimen/dp5" />
+
+            <TextView
+                android:id="@+id/tnc1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkbox_terms"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/link_color"
+                android:layout_marginTop="@dimen/dp12"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@id/checkbox_policy"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/getStarted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dph20"
+            android:layout_weight="0.5"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="GET STARTED"
+            android:textColor="#fff"
+            android:textSize="@dimen/sp14" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/google_fb_parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/facebookLogin"
+            android:layout_width="@dimen/dph50"
+            android:layout_height="@dimen/dph50"
+            android:layout_margin="@dimen/dph10"
+            android:background="@mipmap/facebook">
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/facebook_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/googleLogin"
+            android:layout_width="@dimen/dph50"
+            android:layout_height="@dimen/dph50"
+            android:layout_margin="@dimen/dph10"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:src="@mipmap/google" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/intro_or_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        android:visibility="visible"
+        android:layout_marginBottom="@dimen/dph10"
+        android:layout_above="@id/google_fb_parent_layout">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:scaleType="fitXY"
+            android:src="@mipmap/line_signup" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="OR"
+            android:textSize="@dimen/sp13"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:scaleType="fitXY"
+            android:src="@mipmap/line_signup" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="#fff"
+        android:orientation="vertical"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@+id/main_layout_intro"
+        android:weightSum="4">
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="1.4"
+                   android:src="@mipmap/logo_icon"
+                   android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+        />
+      <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.6"
+                    a/ndroid:orientation="vertical"
+      >
+
+        <TextSwitcher android:layout_width="match_parent"
+                      android:layout_height="130dp"
+                      android:id="@+id/text_switcher_intro"
+                      android:layout_centerHorizontal="true"
+                      android:padding="20dp"
+                      android:foregroundGravity="center"
+
+            >
+
+
+        </TextSwitcher>
+        <include
+          layout="@layout/intro_indicators"
+          android:layout_centerHorizontal="true"
+          android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/text_switcher_intro"
+            android:id="@+id/intro_indicators"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intro_indicators"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/getstarted_btn_color"
+              android:text="GET STARTED"
+              android:gravity="center"
+              android:textColor="#fff"
+              android:textSize="20sp"
+              android:padding="10dp"
+              android:layout_margin="20dp"
+              android:id="@+id/getStarted"
+              />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="7"
+        android:layout_marginTop="15dp">
+      <ImageView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:src="@mipmap/line_signup"
+          android:layout_weight="3"
+          android:scaleType="fitXY"
+          />
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:text="OR"
+              android:textStyle="bold"
+              android:gravity="center"
+              android:textSize="15sp"
+              android:layout_gravity="center"
+              android:layout_weight="1"/>
+
+      <ImageView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:src="@mipmap/line_signup"
+          android:layout_weight="3"
+          android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:layout_margin="15dp">
+              <ImageView
+                  android:layout_width="60dp"
+                  android:layout_height="60dp"
+                  android:src="@mipmap/facebook"
+                  android:layout_margin="10dp"
+                  android:scaleType="fitXY"
+                  android:id="@+id/facebookLogin"/>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/google"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:id="@+id/googleLogin"/>
+          </LinearLayout>
+
+        </LinearLayout>
+
+      </RelativeLayout>
+
+
+
+    </LinearLayout>
+    </RelativeLayout>-->

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/single_item_view_all_bhajan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dph5"
+        android:layout_marginTop="@dimen/dph5"
+        android:layout_marginRight="@dimen/dph5"
+        app:cardCornerRadius="@dimen/dph3"
+        app:cardElevation="@dimen/dph3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/relative_layout_profile"
+                android:layout_width="@dimen/dpw150"
+                android:layout_height="90dp"
+                android:elevation="2dp"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                app:cardCornerRadius="@dimen/dph7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5">
+
+
+                <ImageView
+                    android:id="@+id/artist_image_view_all_bhajan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@mipmap/landscape_placeholder" />
+
+                <ImageView
+                    android:id="@+id/mp3_video_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/mp3" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/channel_name_view_all_bhajan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Sanskar"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/relative_layout_profile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/description_view_all_bhajan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/dummy_text"
+                android:textColor="#c9000000"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/relative_layout_profile"
+                app:layout_constraintTop_toBottomOf="@+id/channel_name_view_all_bhajan" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/single_item_bhajan_options"
+                app:layout_constraintBottom_toTopOf="@+id/description_view_all_bhajan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description_view_all_bhajan"
+                app:layout_constraintVertical_bias="0.666" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

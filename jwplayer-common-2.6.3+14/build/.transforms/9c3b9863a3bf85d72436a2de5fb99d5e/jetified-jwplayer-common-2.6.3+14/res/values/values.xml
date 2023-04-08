@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="JWPlayerView"><attr format="string" name="jw_autostart"/><attr format="string" name="jw_repeat"/><attr format="string" name="jw_controls"/><attr format="string" name="jw_file"/><attr format="string" name="jw_image"/><attr format="string" name="jw_mute"/><attr format="string" name="jw_captions_color"/><attr format="string" name="jw_captions_fontSize"/><attr format="string" name="jw_captions_fontFamily"/><attr format="string" name="jw_captions_fontOpacity"/><attr format="string" name="jw_captions_backgroundColor"/><attr format="string" name="jw_captions_backgroundOpacity"/><attr format="string" name="jw_captions_edgeStyle"/><attr format="string" name="jw_captions_windowColor"/><attr format="string" name="jw_captions_windowOpacity"/><attr format="string" name="jw_logo_file"/><attr format="string" name="jw_logo_hide"/><attr format="string" name="jw_logo_link"/><attr format="string" name="jw_logo_margin"/><attr format="string" name="jw_logo_position"/><attr format="string" name="jw_stretching"/><attr format="string" name="jw_skin_name"/><attr format="string" name="jw_skin_active"/><attr format="string" name="jw_skin_inactive"/><attr format="string" name="jw_skin_background"/><attr format="string" name="jw_skin_url"/><attr format="string" name="jw_related_file"/><attr format="string" name="jw_related_onComplete"/><attr format="string" name="jw_related_heading"/><attr format="string" name="jw_related_autoplayMessage"/><attr format="integer" name="jw_related_autoplayTimer"/></declare-styleable>
+    <string name="invalid_key_edition">Your key edition %1$s is not valid for the attempted action.</string>
+    <string name="license_contains_expiration">Non-trial license contains an expiration date.</string>
+    <string name="license_edition_not_valid_for_player">License Edition %1$s is not valid for JW Player Android SDK.</string>
+    <string name="license_error">License Error</string>
+    <string name="license_has_expired">License has expired</string>
+    <string name="segmentation_log_tag">LICENSE ERROR</string>
+</resources>

@@ -1,0 +1,31 @@
+<resources>
+  <!--<style name="AppTheme.NoActionBar">-->
+    <!--<item name="windowActionBar">false</item>-->
+    <!--<item name="windowNoTitle">true</item>-->
+    <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+  <!--</style>-->
+
+  <!--<style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <item name="colorPrimary">#fff</item>
+    <item name="colorPrimaryDark">#f2f2f2</item>
+    <item name="colorAccent">#F9AA31</item>
+    <item name="windowActionBar">true</item>
+    <item name="windowNoTitle">true</item>
+
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:windowTranslucentStatus">true</item>
+  </style>-->
+
+  <style name="AppTheme_with" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <item name="android:statusBarColor">@android:color/black</item>
+  </style>
+
+  <style name="AppTheme_with_Home" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <item name="android:statusBarColor">#ED6725</item>
+  </style>
+
+
+</resources>

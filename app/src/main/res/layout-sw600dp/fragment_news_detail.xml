@@ -1,0 +1,54 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar2"
+            android:id="@+id/toolbar_guru"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dp10">
+
+            <TextView
+                android:id="@+id/news_heading_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sanskar"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack" />
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp12" />
+            <ImageView
+                android:id="@+id/news_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dph150"
+                android:layout_marginTop="@dimen/dp10"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/news_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp13"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dph10"
+                android:autoLink="web"/>
+        </LinearLayout>
+    </ScrollView>
+
+    </LinearLayout>
+</layout>

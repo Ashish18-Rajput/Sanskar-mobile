@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp300"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/player_view_exo"
+        app:resize_mode="fill"
+        android:visibility="gone"
+        app:surface_type="texture_view"
+        app:use_controller="false"
+        android:background="@android:color/background_dark"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/landscape_placeholder"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/mute_on"
+        android:layout_width="@dimen/dp20"
+        android:layout_height="@dimen/dp20"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp25"
+        android:scaleType="fitXY"
+        android:src="@mipmap/volume_off_new" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp20"
+        android:background="@drawable/play_btn_bg"
+        android:fontFamily="@font/lato_regular"
+        android:paddingEnd="@dimen/dp15"
+        android:paddingTop="@dimen/dp8"
+        android:paddingStart="@dimen/dp15"
+        android:paddingBottom="@dimen/dp8"
+        android:text="Play"
+        android:textStyle="bold"
+        android:textColor="@color/whiteBgColor"
+        android:textSize="16sp" />
+
+
+
+</RelativeLayout>

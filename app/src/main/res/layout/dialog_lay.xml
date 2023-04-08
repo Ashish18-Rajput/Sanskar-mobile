@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_marginTop="@dimen/dph10"
+            android:layout_width="match_parent"
+            android:layout_height="0.50dp"
+            android:background="@color/drawer_inactive" />
+
+        <RelativeLayout
+            android:id="@+id/share_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dph10"
+            android:layout_marginTop="@dimen/dph10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/share_gray"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/share"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/sp14"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="@dimen/dph10"
+            android:layout_width="match_parent"
+            android:layout_height="0.50dp"
+            android:background="@color/drawer_inactive"/>
+
+        <RelativeLayout
+            android:id="@+id/add_play_list_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dph10"
+            android:layout_marginTop="@dimen/dph10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/add_to_playlist"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_play_list"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/sp14"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="@dimen/dph10"
+            android:layout_width="match_parent"
+            android:layout_height="0.50dp"
+            android:background="@color/drawer_inactive"/>
+
+        <RelativeLayout
+            android:id="@+id/cancel_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dph10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp14"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

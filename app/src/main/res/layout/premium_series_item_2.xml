@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bhajan_single_category_single_item_holder_layout"
+    android:layout_width="wrap_content"
+    android:layout_marginBottom="@dimen/dp10"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dp180"
+        android:layout_height="115dp"
+        app:cardCornerRadius="@dimen/dph10"
+        app:cardElevation="@dimen/dph5"
+        android:layout_margin="@dimen/dph2">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/bhajan_single_category_single_item_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/landscape_placeholder" />
+
+                <ImageView
+                    android:id="@+id/mp3_video_icon"
+                    android:layout_width="@dimen/dp30"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp5"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/yellow_crown"
+                    android:visibility="visible" />
+                <ImageView
+                    android:id="@+id/lock_video_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_baseline_lock_open_24"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bhajan_single_category_single_item_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold"
+                android:text="jcfvashv"
+                android:textAlignment="textStart"
+                android:layout_alignParentBottom="true"
+
+                android:textAllCaps="false"
+                android:visibility="visible"/>
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

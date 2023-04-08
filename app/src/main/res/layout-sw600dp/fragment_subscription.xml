@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/sign_up_background"
+    tools:context=".Premium.Activity.ActiveSubscriptionActivity">
+
+
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="@dimen/dp120"
+        android:layout_height="@dimen/dp120"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp12"
+        android:src="@mipmap/sign_up_welcome" />
+
+    <TextView
+        android:id="@+id/text_active"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_below="@id/logo_image"
+        android:layout_marginLeft="@dimen/dp24"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp24"
+        android:text="Active Subscription"
+        android:textColor="@color/bottom_nav_color"
+        android:textSize="28sp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_active"
+        android:layout_margin="@dimen/dp24"
+        app:cardCornerRadius="@dimen/dp16"
+        app:cardElevation="@dimen/dp10"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background4">
+
+            <TextView
+                android:id="@+id/premium_sanskar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12"
+                android:text="S-Premium"
+                android:textColor="@color/whiteBgColor"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/validity_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp18"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/dp14"
+                android:text=""
+                android:textColor="@color/whiteBgColor" />
+
+            <TextView
+                android:id="@+id/plan_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12"
+                android:layout_marginRight="@dimen/dp4"
+                android:layout_toLeftOf="@id/validity_textView"
+                android:text=""
+                android:textColor="@color/whiteBgColor"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/exclusive_Originals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/premium_sanskar"
+                android:layout_marginLeft="@dimen/dp12"
+                android:layout_marginTop="@dimen/dp6"
+                android:text="Exclusive Originals"
+                android:textColor="@color/whiteBgColor"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/pack_durations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exclusive_Originals"
+                android:layout_marginLeft="@dimen/dp12"
+                android:layout_marginTop="@dimen/dp12"
+                android:text="Pack name:"
+                android:textColor="@color/whiteBgColor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/validity_textView_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exclusive_Originals"
+                android:layout_marginLeft="@dimen/dp12"
+                android:layout_marginTop="@dimen/dp12"
+                android:layout_toRightOf="@id/pack_durations"
+                android:text="6 months"
+                android:textColor="@color/whiteBgColor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/pack_expires_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pack_durations"
+                android:layout_marginLeft="@dimen/dp12"
+                android:layout_marginTop="@dimen/dp2"
+                android:text="Pack Expires on:"
+                android:textColor="@color/whiteBgColor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/plan_expires_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pack_durations"
+                android:layout_marginLeft="@dimen/dp12"
+                android:layout_marginTop="@dimen/dp2"
+                android:layout_marginBottom="@dimen/dp24"
+                android:layout_toRightOf="@id/pack_expires_on"
+                android:text="15 april 2021"
+                android:textColor="@color/whiteBgColor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/plan_expires_date"
+                android:layout_marginStart="@dimen/dp24"
+                android:layout_marginEnd="@dimen/dp24"
+                android:layout_marginBottom="@dimen/dp24"
+                android:id="@+id/renew"
+                android:visibility="gone"
+                android:background="@drawable/button_background5"
+                android:text="RENEW NOW"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="@dimen/dp12"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

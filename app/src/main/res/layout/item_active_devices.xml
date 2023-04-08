@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="@dimen/dp120"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dp12"
+    android:layout_marginStart="@dimen/dp10"
+    android:layout_marginBottom="@dimen/dp20">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/com_facebook_blue"
+        android:id="@+id/main_rl">
+
+        <ImageView
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/dp10"
+            />
+
+        <TextView
+            android:id="@+id/mainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="XRN"
+            android:textColor="@color/cardWhiteColor"
+            android:textSize="36sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xaiomi Redmi Note 9 Pro Max"
+            android:textColor="@color/cardWhiteColor"
+            android:textSize="10sp"
+            android:layout_below="@id/mainTitle"
+            android:id="@+id/subTitle"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

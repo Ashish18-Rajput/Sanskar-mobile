@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/fragment_jwplayer" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/framelayoututube"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/fragment_youtubeplayer" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/whiteBgColor"
+            android:theme="@style/AppTheme">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/back_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:src="@drawable/ic_left_black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/app_logo"
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/back_iv"
+                    android:src="@drawable/sanskar_header_logo"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dph10"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp16"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:id="@+id/views"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="visible">
+
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchIv"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5">
+
+                    </androidx.appcompat.widget.SearchView>
+
+                    <ImageView
+                        android:id="@+id/searchCommon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:src="@drawable/ic_search_black"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:id="@+id/tv_iv"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:layout_toRightOf="@id/searchCommon"
+                        android:src="@drawable/ic_baseline_share_24"
+                        android:visibility="gone" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/notify_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/tv_iv">
+
+
+                        <ImageView
+                            android:id="@+id/notification_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_marginRight="@dimen/dpw10"
+                            android:src="@drawable/ic_baseline_notifications_24"
+                            android:visibility="visible" />
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_marginRight="@dimen/dpw10"
+                            android:gravity="center"
+
+                            >
+
+                            <RelativeLayout
+                                android:id="@+id/notify_ll"
+                                android:layout_width="@dimen/dp12"
+                                android:layout_height="@dimen/dp12"
+                                android:layout_marginBottom="@dimen/dp15"
+                                android:background="@drawable/round_bg_notify"
+                                android:visibility="gone">
+
+
+                                <TextView
+                                    android:id="@+id/notifyTV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/white"
+                                    android:textSize="7sp"
+
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/profile_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/dpw10"
+                        android:layout_toRightOf="@id/notify_rl"
+                        android:src="@drawable/ic_baseline_person_24"
+                        android:visibility="visible" />
+
+                    <com.sanskar.tv.CustomViews.AppTextView
+                        android:id="@+id/edit_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="Edit"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <com.sanskar.tv.CustomViews.AppTextView
+                        android:id="@+id/set_pin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/edit_profile"
+                        android:layout_marginEnd="10dp"
+                        android:text="Set Pin"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <com.sanskar.tv.CustomViews.AppTextView
+                        android:id="@+id/cancle_noti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="Cancel"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <com.sanskar.tv.CustomViews.AppTextView
+                        android:id="@+id/save_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="Save"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <com.sanskar.tv.CustomViews.AppTextView
+                        android:id="@+id/clear_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/edit_profile"
+                        android:padding="@dimen/dp5"
+                        android:text="Clear Notification"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/more_options_toolbar3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:src="@drawable/single_item_bhajan_options"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--      </RelativeLayout>-->
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_home_activityy" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
